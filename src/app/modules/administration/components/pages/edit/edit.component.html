@@ -1,2 +1,34 @@
 <p>edit works!</p>
-<button (click)="goToHomepage()">Go to home page!</button>
+<button class="btn btn-dark" (click)="navigateToHomepage()">Go to home page!</button>
+
+<article class="container">
+  <h2>Registro de Producto</h2>
+
+  <form [formGroup]="productForm">
+    <section class="form-group">
+      <label for="productName">Product name: </label>
+
+      <input
+        type="text"
+        id="productName"
+        class="form-control"
+        formControlName="productName"
+        required
+      />
+    </section>
+
+    <section class="form-group">
+      <label for="quantity">Amount: </label>
+
+      <input
+        type="number"
+        id="quantity"
+        class="form-control"
+        formControlName="quantity"
+        required
+      />
+    </section>
+
+    <button type="submit" class="btn btn-primary mt-2">Register Product</button>
+  </form>
+</article>

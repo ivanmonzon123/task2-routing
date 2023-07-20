@@ -1,10 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {RouterModule} from '@angular/router';
+import {ReactiveFormsModule} from '@angular/forms';
 import { AdministrationComponent } from './administration.component';
 import { UserComponent } from './components/pages/user/user.component';
 import { EditComponent } from './components/pages/edit/edit.component';
-import {AdministrationGuard} from './guards/administration.guard';
 import {AdministrationRoutingModule} from './routes/administration-routing.module';
 
 
@@ -17,7 +16,8 @@ import {AdministrationRoutingModule} from './routes/administration-routing.modul
   ],
   imports: [
     CommonModule,
-    AdministrationRoutingModule
+    AdministrationRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class AdministrationModule { }
