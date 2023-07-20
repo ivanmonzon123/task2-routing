@@ -2,9 +2,7 @@ import {Routes} from '@angular/router';
 
 
 export const APP_ROUTES_CONFIG: Routes = [
-  {
-    path: '', redirectTo: 'home', pathMatch: 'full'
-  },
+  {path: '', redirectTo: 'home', pathMatch: 'full'},
   {
     path: 'home',
     loadChildren: () => import('../modules/home/home.module').then(module => module.HomeModule)},
@@ -14,5 +12,6 @@ export const APP_ROUTES_CONFIG: Routes = [
   {
     path: 'administration',
     loadChildren: () => import('../modules/administration/administration.module').then(module => module.AdministrationModule)
-  }
+  },
+  {path: '**', redirectTo: 'home', pathMatch: 'full'}
 ];

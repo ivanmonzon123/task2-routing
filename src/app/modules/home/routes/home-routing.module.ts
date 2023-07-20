@@ -7,7 +7,9 @@ import {HOME_ROUTES_CONFIG} from './home-routes';
   imports: [
     RouterModule.forChild(HOME_ROUTES_CONFIG)
   ],
-  exports: [RouterModule]
+  exports: [
+    RouterModule
+  ]
 })
 export class HomeRoutingModule {
 }
