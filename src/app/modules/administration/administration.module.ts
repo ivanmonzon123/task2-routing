@@ -4,6 +4,7 @@ import {RouterModule} from '@angular/router';
 import { AdministrationComponent } from './administration.component';
 import { UserComponent } from './components/pages/user/user.component';
 import { EditComponent } from './components/pages/edit/edit.component';
+import {AdministrationGuard} from './guards/administration.guard';
 import {AdministrationRoutingModule} from './routes/administration-routing.module';
 
 

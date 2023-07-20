@@ -2,9 +2,11 @@ import {Routes} from '@angular/router';
 import {AdministrationComponent} from '../administration.component';
 import {EditComponent} from '../components/pages/edit/edit.component';
 import {UserComponent} from '../components/pages/user/user.component';
+import {AdministrationGuard} from '../guards/administration.guard';
 
 
-export const ADMINISTRATION_ROUTES_CONFIG: Routes = [
+export let ADMINISTRATION_ROUTES_CONFIG: Routes;
+ADMINISTRATION_ROUTES_CONFIG = [
   {path: '', redirectTo: 'users', pathMatch: 'full'},
   {
     path: '',
@@ -17,7 +19,7 @@ export const ADMINISTRATION_ROUTES_CONFIG: Routes = [
         path: 'users/:id', component: UserComponent
       },
       {
-        path: 'edit', component: EditComponent
+        path: 'edit', component: EditComponent, canDeactivate: [AdministrationGuard]
       }
     ]
   },
